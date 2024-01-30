@@ -1,0 +1,132 @@
+// ==================================
+// =              MAIN              =
+// ==================================
+
+h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+main {
+  padding: 0.6rem 0;
+}
+
+#main__wrapper {
+  display: grid;
+  row-gap: 2rem;
+
+  // ==================================
+  // =           __HEADING            =
+  // ==================================
+
+  & .__grid__item__header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .__grid__item__header__text {
+      & p {
+        color: $dim-gray;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // ==================================
+  // =        _GRID__CONTAINER        =
+  // ==================================
+
+  & #__main__item__grid__container {
+    display: grid;
+    row-gap: 1.4rem;
+
+    & .__main__item__grid__item {
+      display: grid;
+      row-gap: 0.8rem;
+
+      & .__grid__item__img__container {
+        padding: 2rem 1.5rem;
+        background: $main-img-bg;
+        border-radius: 0.5rem;
+        position: relative;
+
+        & img {
+          transition: opacity 700ms;
+        }
+        & span.__visit__page {
+          display: none;
+        }
+      }
+    }
+
+    & .__grid__item__tag__container {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+
+      & .taglist {
+        background: $yellow-bg;
+        border-radius: 0.3rem;
+        padding: 0.1rem 0.7rem;
+      }
+    }
+  }
+}
+
+// ==================================
+// =     _GRID__CONTAINER HOVER     =
+// ==================================
+.__grid__item__img__container:hover {
+  & img {
+    opacity: 0.6;
+  }
+
+  & span.__visit__page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $yellow-bg;
+    width: 100px;
+    height: 100px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+// ==================================
+// =           MAIN CTA BTN         =
+// ==================================
+
+.__main__item__btn {
+  justify-self: center;
+  padding-top: 1.5rem;
+
+  & button {
+    font-size: 1.1rem;
+    font-weight: bold;
+    word-spacing: 0.2rem;
+    background: $btn-bg;
+    color: $gray-text;
+    padding: 0.6rem 1rem;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+    transition: background 500ms;
+  }
+
+  // ==================================
+  // =     __MAIN CTA BTN HOVER       =
+  // ==================================
+  & button:is(:hover, :focus) {
+    background: $yellow;
+  }
+}

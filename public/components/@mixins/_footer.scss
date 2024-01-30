@@ -1,0 +1,20 @@
+footer {
+  padding: 2rem;
+}
+
+#__footer__header {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+#__social__icons {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#__social__icons a:is(:hover, :focus) {
+  color: $yellow;
+}

@@ -1,0 +1,103 @@
+header {
+  background: $header-bg;
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+#header-wrapper {
+  position: relative;
+  padding: 0.6rem 0 0.7rem;
+
+  & #header__brand {
+    font-size: 2rem;
+    font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+
+    & #lname {
+      margin-left: 0.5rem;
+    }
+
+    :is(b) {
+      transition: color 700ms;
+      &:is(:hover, :focus) {
+        color: $yellow;
+      }
+    }
+  }
+
+  & #header__navbar {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: $header-bg;
+    z-index: 998;
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      height: inherit;
+      justify-content: center;
+      align-content: center;
+      gap: 1rem;
+      padding: 1.3rem 0.9rem 0;
+
+      & a {
+        font-size: 2.5rem;
+        text-align: right;
+        // color: $gray-text;
+        text-transform: capitalize;
+        transition: color 700ms;
+      }
+      
+      & nav a {
+        position: relative;
+      }
+    }
+  }
+
+  #__bs__navbar {
+    display: none;
+  }
+}
+
+:is(nav a):is(:hover, :focus, .active) {
+  color: $yellow;
+}
+
+nav a.active::before {
+  content: "\2022";
+  padding-right: 0.5rem;
+}
+
+#header__btn {
+  padding-right: 0.6rem;
+  position: fixed;
+  left: 100%;
+  top: 0;
+  transform: translateX(-100%);
+  display: flex;
+  align-items: center;
+  background: $header-bg;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  z-index: 999;
+
+  & .toggler {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+:is(.close__menu) {
+  display: none;
+}

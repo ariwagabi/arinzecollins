@@ -1,0 +1,124 @@
+@import '../../../public/components/@mixins/root';
+
+main {
+  margin-top: 1rem;
+}
+
+#__hero__container
+{
+  text-align: center;
+
+  & img
+  {
+    margin: auto;
+    display: block;
+  }
+  
+
+  & h1.__hero__header
+  {
+    color: $gray-text;
+    margin-top: 2rem;
+    font-family: cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: inherit;
+  }
+
+  & p
+  {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+#__form
+{
+  background: $header-bg;
+  padding: 2rem 0;
+  margin: 2rem 0;
+}
+
+#__form__container {
+  background: $body-main-bg;
+  padding: 1rem;
+  padding-bottom: 3rem;
+}
+
+h4#__form__subheader
+{
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+h2#__form__header
+{
+  font-weight: 300;
+  color: $gray-text;
+}
+
+input,
+#message {
+  width: 100%;
+  font-size: 1.1rem;
+  background: $header-bg;;
+  color: $gray-text;
+  padding: 0.8rem 0.7rem;
+  margin-top: 1rem;
+  border: 0;
+}
+
+:is(input, #message):focus {
+  outline: 0;
+}
+
+input[type="submit"] {
+  background: $yellow-bg;
+  color: $gray-text;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: $yellow;
+}
+
+ul#__social__accts__container {
+  list-style: none;
+}
+
+li.__social__accts__item {
+  background: $header-bg;
+  color: $gray-text;
+  margin-top: 1rem;
+}
+
+p.__social__item__name {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-right: auto;
+  margin-left: 0.8rem;
+}
+
+li.__social__accts__item a {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0.7rem;
+}
+
+li.__social__accts__item a .__social__item__arrow {
+  transition: all 700ms;
+}
+
+li.__social__accts__item a:hover {
+  color: $yellow;
+}
+
+li.__social__accts__item a:hover  p.__social__item__name{
+  font-weight: 400;
+}
+
+li.__social__accts__item a:hover .__social__item__arrow {
+  transform: rotate(-40deg);
+}
